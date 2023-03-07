@@ -12,10 +12,6 @@
     require 'Comments.php';
 
     $comment = new Comments('This is the first comment text', 2112);
-
-
-
-
 ?>
 
 <p><?php echo $comment->text ?> <b>by user:</b> <?php $comment->userId ?></p>
