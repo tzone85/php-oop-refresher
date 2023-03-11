@@ -1,7 +1,7 @@
 <?php
 
 namespace chapter3;
-require_once 'CsvFileReader.php';
+require_once 'FileReaderInterface.php';
 class StockManager
 {
     public function updateStockFromFile(string $fileName, FileReaderInterface $fileReader)

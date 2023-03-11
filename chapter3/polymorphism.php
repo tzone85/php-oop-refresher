@@ -16,6 +16,7 @@ use chapter3\StockManager;
 
 require_once 'StockManager.php';
 require_once 'JsonFileReader.php';
+require_once 'CsvFileReader.php';
 
     $stockManager = new StockManager();
     $csvFileReader = new CsvFileReaderAlias();
