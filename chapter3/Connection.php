@@ -2,6 +2,7 @@
 
 namespace chapter3;
 
+// https://www.php.net/manual/en/language.oop5.magic.php
 class Connection
 {
     /**
