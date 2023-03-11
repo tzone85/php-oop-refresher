@@ -4,9 +4,9 @@ namespace chapter3;
 require_once 'CsvFileReader.php';
 class StockManager
 {
-    public function updateStockFromFile(string $fileName, CsvFileReader $csvFileReader)
+    public function updateStockFromFile(string $fileName, FileReaderInterface $fileReader)
     {
-        $stockItems = $csvFileReader->readFileAsAssociativeArray($fileName);
+        $stockItems = $fileReader->readFileAsAssociativeArray($fileName);
 
         foreach ($stockItems as $stockItem) {
             print 'Updating the database with items: '.$stockItem['name'].'<br/>';
