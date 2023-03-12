@@ -16,10 +16,10 @@ use App\Utility\RandomUtilityClass;
 include 'autoload.php';
 
      $mySqlConnection = new MySqlConnection();
-     $utility = new RandomUtilityClass();
+     $utility = new RandomUtilityClass()
 ?>
 
-<p><?php  echo $mySqlConnection->getDatabaseUrl();  ?></p>
+<p><?php  echo $mySqlConnection->databaseUrl;  ?></p>
 <p><?php echo $utility->status; ?></p>
 
 </body>
