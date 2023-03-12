@@ -5,22 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Traits</title>
+    <title>AutoLoading</title>
 </head>
 <body>
 <?php
 
-use App\Logging\Logger;
-use App\Users\Customer;
+use App\Connection\MySqlConnection;
+use App\Utility\RandomUtilityClass;
 
-require_once 'autoload.php';
+include 'autoload.php';
 
-    $logger = new Logger();
-    $customer = new Customer();
-
-    $customer->setLogger($logger);
+     $mySqlConnection = new MySqlConnection();
+     $utility = new RandomUtilityClass()
 ?>
 
-<p><?php $customer->getLogger()->log(); ?></p>
+<p><?php  echo $mySqlConnection->databaseUrl;  ?></p>
+<p><?php echo $utility->status; ?></p>
+
 </body>
 </html>
